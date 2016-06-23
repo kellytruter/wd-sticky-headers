@@ -1,0 +1,92 @@
+/*
+************************************************************
+This css give the main page behiour and style for the menu
+menu buttons, header etc.
+************************************************************
+*/
+body, html {
+  background-color: #F9F9F9;
+}
+
+/*
+************************************************************
+                         Header CSS
+************************************************************
+*/
+.wd-header {
+  background-color: #C63D0F;
+  color: #FDF3E7;
+  z-index: 10001;
+}
+
+.wd-menu-toggle .wd-header {
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,.15);
+}
+
+@media (min-width: 768px) {
+  .wd-header {
+    box-shadow: 0px 2px 4px 0 rgba(0,0,0,.15);
+  }
+
+  .wd-menu-toggle .wd-header {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+  }
+}
+
+.wd-header .wd-logo {
+  background: #C63D0F no-repeat center center fixed;
+  border: 1px dotted #FDF3E7;
+  position: fixed;
+  right: 7px;
+  left: auto;
+}
+
+/*
+************************************************************
+                        Side Menu
+************************************************************
+*/
+.wd-menu {
+  border-top: 0;
+  top: 0px;
+  background-color: #3B3738;
+  color: #FDF3E7;
+  z-index: 10002;
+}
+/*
+************************************************************
+                        Menu Button
+************************************************************
+*/
+.wd-menu-button {
+  position: fixed;
+  left: -10px;
+  top: 3px;
+  width: 48px;
+  height: 44px;
+  border-radius: 10px;
+  color: #f1f1f1;
+  background: #3B3738;
+  z-index: 10002;
+  transition-property: left;
+  transition-duration: .4s;
+}
+
+.wd-menu-button i {
+  position: relative;
+  top: 8px;
+}
+
+.wd-menu-toggle .wd-menu-button {
+  left: 240px;
+}
+
+@media (min-width: 768px) {
+  .wd-menu-button {
+    left: 240px;
+  }
+
+  .wd-menu-toggle .wd-menu-button {
+    left: -10px;
+  }
+}

@@ -1,0 +1,287 @@
+/*
+************************************************************
+This is the CSS used by the Stick-Header angular directive.
+************************************************************
+*/
+.wd-sticky-header {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+  border-radius: 2px !important;
+}
+
+/*
+************************************************************
+This css give the main page behiour and style for the menu
+menu buttons, header etc.
+************************************************************
+*/
+
+/* Dial down the suck just a little bit in Internet Explorer */
+@-ms-viewport{ width: auto !important; }
+
+body, html {
+  height: 100%;
+  font-family: verdana;
+  padding: 0;
+  margin: 0;
+  background-color: #e5e5e5;
+}
+
+.wd-dashboard {
+  padding-top: 50px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 0;
+  transition-property: padding-left;
+  transition-duration: .4s;
+}
+
+@media (min-width: 768px) {
+  .wd-dashboard {
+    padding-left: 250px;
+  }
+
+  .wd-menu-toggle .wd-dashboard {
+    padding-left: 0;
+  }
+}
+
+.wd-spin-forward {
+  transform: rotate(360deg);
+}
+
+.wd-spin-backward {
+  transform: rotate(-360deg);
+}
+
+/*
+************************************************************
+                         Header CSS
+************************************************************
+*/
+.wd-header {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+  background-color: #FFF;
+  color: #262626;
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,.15);
+  text-align: center;
+  z-index: 10002;
+  overflow: none;
+  transition-property: box-shadow;
+  transition-duration: .4s;
+}
+
+.wd-menu-toggle .wd-header {
+  box-shadow: 250px 2px 4px 0 rgba(0,0,0,.15);
+}
+
+@media (min-width: 768px) {
+  .wd-header {
+    box-shadow: 250px 2px 4px 0 rgba(0,0,0,.15);
+  }
+
+  .wd-menu-toggle .wd-header {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+  }
+}
+
+.wd-header .wd-logo {
+  background: #FFF no-repeat center center fixed;
+  border: 1px dotted #000;
+  font-size: 22px;
+  position: fixed;
+  height: 35px;
+  width: 150px;
+  left: 55px;
+  top: 7px;
+}
+
+/*
+************************************************************
+                        Side Menu
+************************************************************
+*/
+.wd-menu {
+  border-top: 1px solid #d8d8d8;
+  background-color: #FFF;
+  color: #262626;
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,.15);
+  width: 250px;
+  position: fixed;
+  top: 50px;
+  left: -260px;
+  bottom: 0px;
+  overflow-x: none;
+  overflow-y: auto;
+  z-index: 10001;
+  transition-property: left;
+  transition-duration: .4s;
+}
+
+.wd-menu-toggle .wd-menu {
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .wd-menu {
+    left: 0;
+  }
+
+  .wd-menu-toggle .wd-menu {
+    left: -254px;
+  }
+}
+
+/*
+************************************************************
+                        Menu Button
+************************************************************
+*/
+.wd-menu-button {
+  position: fixed;
+  padding: 0;
+  border: 0;
+  left: 0px;
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  color: #FFF;
+  background: #000;
+  cursor: pointer;
+}
+
+.wd-menu-button i {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  left: -1px;
+  top: 11px;
+  transition-property: all;
+  transition-duration: .4s;
+}
+
+.wd-menu-button-open {
+  display: block;
+}
+
+.wd-menu-button-closed {
+  display: none;
+}
+
+.wd-menu-toggle .wd-menu-button-open {
+  display: none;
+}
+
+.wd-menu-toggle .wd-menu-button-closed {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .wd-menu-button-open {
+    display: none;
+  }
+
+  .wd-menu-button-closed {
+    display: block;
+  }
+
+  .wd-menu-toggle .wd-menu-button-open {
+    display: block;
+  }
+
+  .wd-menu-toggle .wd-menu-button-closed {
+    display: none;
+  }
+}
+
+/*
+************************************************************
+                      Content Section
+************************************************************
+*/
+/* No padding on phones, cause we want as much space as possible */
+.wd-page-content {
+  padding: 0px;
+  transition-property: padding;
+  transition-duration: .4s;
+}
+
+/* some padding on tablets cause we can */
+@media (min-width: 768px) {
+  .wd-page-content {
+    padding: 5px;
+  }
+}
+
+/* Lots of padding on desktops cause it just makes it easier to look at. */
+@media (min-width: 992px) {
+  .wd-page-content {
+    padding: 20px;
+  }
+}
+
+/*
+************************************************************
+This stuff is not needed for the dashboard, but is just used
+for elements on the demo page like the table and stuff
+************************************************************
+*/
+.section {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+  background-color: #FFF;
+  width: %100;
+}
+
+table {
+  border: 1px solid #d8d8d8;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,.15);
+  background-color: #FFF;
+  border-radius: 2px;
+}
+
+th { 
+  background-color: #eee; 
+  padding: 10px;
+  text-align: left;
+}
+
+th > tr {
+  /*width: 100%;*/
+  border-top: 1px solid #d8d8d8;
+}
+
+tr {
+  border-top: 1px solid #d8d8d8;
+}
+
+tr:nth-child(odd) {
+  background: #eee;
+}
+
+td { 
+  padding: 10px;
+}
+
+.text-area {
+  border: 1px solid #d8d8d8;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  border-radius: 2px;
+}
+
+.text-area > h2 {
+  background: #F1F1F1;
+  padding: 10px;
+  font: 28px Verdana, Serif;
+  margin: 0 0 20px 0;
+}
+
+.text-area .text-content {
+  padding: 2px;
+}

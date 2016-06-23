@@ -1,0 +1,27 @@
+{
+  "name": "wd-sticky-headers",
+  "version": "1.0.0",
+  "description": "This is an angularjs directive for making headers scroll with a screen.",
+  "main": "demo/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kellytruter/wd-sticky-headers.git"
+  },
+  "keywords": [
+    "sticky",
+    "headers",
+    "scrolling",
+    "headers",
+    "fixed",
+    "headers"
+  ],
+  "author": "Kelly Truter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kellytruter/wd-sticky-headers/issues"
+  },
+  "homepage": "https://github.com/kellytruter/wd-sticky-headers#readme"
+}
