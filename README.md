@@ -1,7 +1,7 @@
-sticky-headers
+wd-sticky-headers
 ==============
 
-An AngularJS directive for making headers that won't scroll past the top of the screen.
+An AngularJS directive for making headers scroll with the screen.
 
 [Demo Page](http://rawgit.com/kellytruter/wd-sticky-header/master/demo/index.html)
 
