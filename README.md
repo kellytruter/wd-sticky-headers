@@ -3,46 +3,38 @@ sticky-headers
 
 An AngularJS directive for making headers that won't scroll past the top of the screen.
 
-[Demo Page](http://rawgit.com/FutureStateMobile/sticky-header/master/demo/index.html)
-
-<img src='https://cloud.githubusercontent.com/assets/353374/4542675/5f7336f8-4e24-11e4-8ecd-1749a5639ca1.png' />
-
-<img src='https://cloud.githubusercontent.com/assets/353374/4542679/68567294-4e24-11e4-8c4d-4f0e3227743f.png' />
+[Demo Page](http://rawgit.com/kellytruter/wd-sticky-header/master/demo/index.html)
 
 How to use it
 -------------
 
 Just include jQuery, Angular, and the sticky-headers JavaScript file in your page. You can also install it
-using either `bower` or `npm`:
+using `npm`:
 
 ```
-bower install fsm-sticky-header
-
-# or
-
-npm install fsm-sticky-header
+npm install wd-sticky-header
 ```
 
 ```html
   <head>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
-	<script src="https://rawgithub.com/FutureStateMobile/sticky-headers/master/src/fsm-sticky-header.js"></script>
+	<script src="https://rawgithub.com/kellytruter/wd-sticky-headers/master/src/fsm-sticky-header.js"></script>
   </head>
 ```
 
-Then include the `fsm` Angular module in your own module:
+Then include the `wd-sticky-headers` Angular module in your own module:
 
 ```js
-angular.module('MyHappyModule', ['fsm']);
+angular.module('MyModule', ['wd-sticky-headers']);
 ```
 
 Then add the directive to the element that you with to stick to the top of the page
 
 ```html
-  <table ng-app="MyHappyModule" id="testtable">
+  <table ng-app="MyModule" id="theScrollBody">
     <thead>
-      <tr fsm-sticky-header scroll-body="#testtable" scroll-stop='50'>
+      <tr wd-sticky-header wd-scroll-body="#theScrollBody" scroll-stop='50' wd-is-fixed="true">
          <th>Column One Header</th>
          <th>Column Two Header</th>
       </tr>
